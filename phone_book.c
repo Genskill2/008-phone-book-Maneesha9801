@@ -110,7 +110,7 @@ void free_entries(entry *p) {
   while(p!=NULL){
   free(p);
   p =p->next;
-   
+  }
 }
 
 void print_usage(char *message, char *progname) {
@@ -201,7 +201,7 @@ void list(FILE *db_file) {
     count++;
   }
   /* TBD print total count */
-  size =count;
+  size = count;
   printf("Total entries :  %d\n",count);
   free_entries(base);
 }
